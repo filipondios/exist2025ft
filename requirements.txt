@@ -1,0 +1,10 @@
+datasets
+matplotlib
+pandas
+transformers
+spacy
+emoji
+torch
+accelerate
+ekphrasis
+scikit-learn
