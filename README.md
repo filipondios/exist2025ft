@@ -3,7 +3,7 @@
 
 This project explores the task of automatic sexism detection in Spanish tweets using transformer-based models. The goal is to classify tweets as sexist or non-sexist, a challenging task due to the presence of implicit language, sarcasm, and contextual meaning.
 
-The system is built by fine-tuning a pretrained transformer model on the EXIST dataset and evaluating its performance using standard classification metrics. In addition to model training, the project includes training dynamics analysis, confusion matrix visualization, and detailed error analysis.
+The system is built by fine-tuning a pretrained transformer model on the [EXIST dataset](https://nlp.uned.es/exist2025/) and evaluating its performance using standard classification metrics. In addition to model training, the project includes training dynamics analysis, confusion matrix visualization, and detailed error analysis.
 
 This work highlights both the potential and the limitations of NLP models when applied to socially sensitive tasks such as online sexism detection.
 
@@ -22,10 +22,12 @@ Because sexism can be expressed implicitly or contextually, the dataset contains
 
 ## Approach
 
-The project focuses on fine-tuning a transformer model for sequence classification. Main steps:
+The project focuses on fine-tuning a transformer model for sequence classification. The main steps that where followed are:
 
 1. Text preprocessing
     - Basic normalization
+    - Replacement of mentions (@user) with ``[USER]``
+    - Replacement of URLs with ``[URL]``
     - Tokenization using a pretrained transformer tokenizer
 2. Model fine-tuning
     - Transformer-based model adapted for binary classification
@@ -37,7 +39,8 @@ The project focuses on fine-tuning a transformer model for sequence classificati
     - F1-score
 4. Error analysis
     - Confusion matrix
-    - Inspection of false positives and false negatives
+    - Inspection of false positives
+    - Inspection of false negatives
 
 ## Training Dynamics
 
@@ -77,14 +80,6 @@ The model shows strong performance in identifying non-sexist tweets, while some 
 
 ## Error Analysis
 
-Inspection of misclassified examples reveals several sources of difficulty:
+The inspection of misclassified examples reveals several sources of difficulty. In the case of **false positives**, there where tweets containing strong or offensive language not necessarily directed at women, and sometimes irony or humor that may resemble sexist language patterns.
 
-- False Positives
-    - Tweets containing strong or offensive language not necessarily directed at women
-    - Irony or humor that may resemble sexist language patterns
-- False Negatives
-    - Implicit sexism without explicit offensive words
-    - Context-dependent statements
-    - Subtle stereotypes
-
-These cases illustrate the limitations of purely text-based models when dealing with nuanced social phenomena.
+In the other hand, **false negatives** contained implicit sexism without explicit offensive words, context-dependent statements or subtle stereotypes. These cases illustrate the limitations of purely text-based models when dealing with nuanced social phenomena.
