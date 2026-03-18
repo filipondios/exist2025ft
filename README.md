@@ -1,4 +1,3 @@
-# Sexism Detection in Spanish Tweets (EXIST Dataset)
 ## Project Overview
 
 This project explores the task of automatic sexism detection in Spanish tweets using transformer-based models. The goal is to classify tweets as sexist or non-sexist, a challenging task due to the presence of implicit language, sarcasm, and contextual meaning.
