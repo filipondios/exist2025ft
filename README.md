@@ -80,6 +80,6 @@ The model shows strong performance in identifying non-sexist tweets, while some 
 
 ## Error Analysis
 
-The inspection of misclassified examples reveals several sources of difficulty. In the case of **false positives**, there where tweets containing strong or offensive language not necessarily directed at women, and sometimes irony or humor that may resemble sexist language patterns.
+The inspection of misclassified examples reveals several sources of difficulty. In the case of **false positives**, there were tweets containing strong or offensive language not necessarily directed at women, as well as instances of irony or humor that may have resembled sexist language patterns.
 
-In the other hand, **false negatives** contained implicit sexism without explicit offensive words, context-dependent statements or subtle stereotypes. These cases illustrate the limitations of purely text-based models when dealing with nuanced social phenomena.
+On the other hand, **false negatives** contained implicit sexism without explicit offensive words, context-dependent statements, or subtle stereotypes. These cases illustrate the limitations of purely text-based models when dealing with nuanced social phenomena.
